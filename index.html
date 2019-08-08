@@ -13,7 +13,6 @@ mixpanel.init("6a965bdfff31732a9dafdc34d8b5aead");</script><!-- end Mixpanel -->
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 	</head>
 	<body class="is-preload">
-		mixpanel.track("Video play");
 		<!-- Sidebar -->
 			<section id="sidebar">
 				<div class="inner">
@@ -28,11 +27,15 @@ mixpanel.init("6a965bdfff31732a9dafdc34d8b5aead");</script><!-- end Mixpanel -->
 						</ul>
 					</nav>
 				</div>
+				<script type="text/javascript">
+					mixpanel.track_links("#inner a", "click nav link", {
+						"referrer": document.referrer
+					});
+				</script>
 			</section>
 
 		<!-- Wrapper -->
 			<div id="wrapper">
-
 				<!-- Intro -->
 					<section id="intro" class="wrapper style1 fullscreen fade-up">
 						<div class="row">
